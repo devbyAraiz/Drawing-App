@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+canvas {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    cursor: crosshair;
+}
+
+/* Glassmorphism */
+.glass {
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Toolbox */
+.toolbox {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+}
+
+.toolbox button,
+.toolbox span,
+.toolbox input {
+    height: 48px;
+    width: 48px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.85);
+    transition: all 0.25s ease;
+}
+
+/* Hover & Click Animations */
+.toolbox button:hover,
+.toolbox input:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.toolbox button:active {
+    transform: scale(0.95);
+}
+
+#size {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Clear Button Danger */
+#clear {
+    margin-left: auto;
+    background: #ff5f5f;
+    color: #fff;
+}
+
+#clear:hover {
+    background: #ff3b3b;
+}
